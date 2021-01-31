@@ -28,3 +28,6 @@ Route::get('/insert/{id}', function ($id) {
 Route::get('/test', function () {
     return Redis::get('id');
 })->where('test', '[A-Za-z]+');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
